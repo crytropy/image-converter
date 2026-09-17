@@ -77,7 +77,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .settings-panel {
   padding: 18px 20px;
   display: grid;
-  grid-template-columns: 1fr 1.4fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 22px;
 }
 .setting-group { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
