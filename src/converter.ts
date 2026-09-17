@@ -155,7 +155,7 @@ async function convertPdf(
     for (const output of outputs) URL.revokeObjectURL(output.url)
     throw error
   } finally {
-    await pdf.destroy()
+    await loadingTask.destroy()
   }
 }
 
