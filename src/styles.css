@@ -125,7 +125,7 @@ select { width: 100%; padding: 10px 12px; border: 1px solid #d8dee7; border-radi
 .secondary-button { background: #fff; border-color: #d8dee7; color: #334155; }
 button:disabled { opacity: .5; cursor: not-allowed; }
 .summary { margin-left: auto; color: #7c8796; font-size: 13px; }
-footer { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #dde2e8; padding-top: 18px; color: #8b94a1; font-size: 12px; }
+footer { display: flex; justify-content: flex-end; gap: 16px; border-top: 1px solid #dde2e8; padding-top: 18px; color: #8b94a1; font-size: 12px; }
 
 @media (max-width: 760px) {
   .page-shell { width: min(100% - 20px, 980px); padding-top: 30px; }
