@@ -338,8 +338,7 @@ export default function App() {
       </section>
 
       <footer>
-        <span>所有轉換都在本機瀏覽器完成。</span>
-        <span>第一版 MVP</span>
+        <span>v0.1.0</span>
       </footer>
     </main>
   )
