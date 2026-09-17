@@ -30,7 +30,6 @@ export default function App() {
   const [jobs, setJobs] = useState<ConversionJob[]>([])
   const [outputFormat, setOutputFormat] = useState<OutputFormat>('jpeg')
   const [quality, setQuality] = useState(0.9)
-  const [pdfScale, setPdfScale] = useState(2)
   const [isConverting, setIsConverting] = useState(false)
   const [dragActive, setDragActive] = useState(false)
   const [notice, setNotice] = useState('')
@@ -118,7 +117,7 @@ export default function App() {
           source.file,
           outputFormat,
           quality,
-          pdfScale,
+          3,
           (progress) => {
             setJobs((current) =>
               current.map((job) => (job.id === id ? { ...job, progress } : job)),
@@ -256,21 +255,6 @@ export default function App() {
             disabled={outputFormat !== 'jpeg' || isConverting}
             onChange={(event) => setQuality(Number(event.target.value))}
           />
-        </div>
-
-        <div className="setting-group">
-          <label htmlFor="pdfScale">PDF 解析度</label>
-          <select
-            id="pdfScale"
-            value={pdfScale}
-            disabled={isConverting}
-            onChange={(event) => setPdfScale(Number(event.target.value))}
-          >
-            <option value={1}>1×（較小）</option>
-            <option value={1.5}>1.5×</option>
-            <option value={2}>2×（建議）</option>
-            <option value={3}>3×（較清晰）</option>
-          </select>
         </div>
       </section>
 
